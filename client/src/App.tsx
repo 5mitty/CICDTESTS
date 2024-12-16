@@ -1,9 +1,10 @@
-import Quiz from './components/Quiz';
+import React from 'react';
+import TestText from './components/TestText.tsx';
 
 function App() {
   return (
     <div className="App">
-      <Quiz />
+      <TestText />
     </div>
   );
 }
