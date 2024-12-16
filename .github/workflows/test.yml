@@ -8,9 +8,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      
+      - name: Install Dependencies
+        run: |
+          cd server && npm install
+          cd ../client && npm install
+
+      - name: Start Server
+        run: |
+          cd server
+          npm start & # Start the server in the background
+          sleep 10   # Wait for a few seconds to ensure the server is up
+
       - name: Test
         run: |
-          npm install
+          cd client
           npm run test
 
       - name: Deploy
