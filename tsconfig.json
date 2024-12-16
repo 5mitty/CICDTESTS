@@ -36,6 +36,6 @@
     "noImplicitOverride": true,
     "useUnknownInCatchVariables": true
   },
-  "include": ["src/**/*"], /* Include all TypeScript files in the src directory. */
-  "exclude": ["node_modules", "dist", "cypress"] /* Exclude directories that should not be compiled. */
+  "include": ["src/**/*", "cypress/**/*"],
+  "exclude": ["node_modules", "dist"]
 }
