@@ -1,9 +1,0 @@
-{
-  "extends": "../tsconfig.json",
-  "compilerOptions": {
-    "target": "es6",
-    "lib": ["es6", "dom"],
-    "types": ["cypress", "node"]
-  },
-  "include": ["**/*.ts", "tests/**/*.ts"] // Adjust as needed
-}
