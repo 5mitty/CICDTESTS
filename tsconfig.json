@@ -8,7 +8,7 @@
 
     /* Output Directory */
     "outDir": "./dist", /* Ensure this is a separate directory for compiled files. */
-    "rootDir": "./src", /* Specify the root directory of input files. */
+    "rootDir": "./", /* Change rootDir to the project root to include all files. */
 
     /* JavaScript Support */
     "allowJs": true,
@@ -36,6 +36,10 @@
     "noImplicitOverride": true,
     "useUnknownInCatchVariables": true
   },
-  "include": ["src/**/*", "cypress/**/*"],
+  "include": [
+    "src/**/*",
+    "cypress/**/*", // Ensure Cypress files are included
+    "vite.config.ts" // Include vite.config.ts explicitly
+  ],
   "exclude": ["node_modules", "dist"]
 }
