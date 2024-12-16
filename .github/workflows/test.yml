@@ -14,6 +14,10 @@ jobs:
           cd server && npm install
           cd ../client && npm install
 
+      - name: Build Server and Client
+        run: |
+          npm run render-build # This will install and build both server and client
+
       - name: Start Server
         run: |
           cd server
