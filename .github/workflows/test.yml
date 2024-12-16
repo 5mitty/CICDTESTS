@@ -16,14 +16,14 @@ jobs:
 
       - name: Build Server and Client
         run: |
-          npm run render-build # This will install and build both server and client
+          npm run render-build
 
       - name: Start Server
         run: |
           cd server
           npm start & # Start the server in the background
           # Wait for the server to be available
-          for i in {1..10}; do
+          for i in {1..20}; do
             if curl -s http://localhost:3001 > /dev/null; then
               echo "Server is up!"
               break
@@ -31,6 +31,10 @@ jobs:
             echo "Waiting for server to start..."
             sleep 5
           done
+
+      - name: Check Running Processes
+        run: |
+          ps aux | grep node
 
       - name: Test
         run: |
