@@ -1,9 +1,10 @@
 import { defineConfig } from "cypress";
+import startDevServer from "cypress-vite";
 
 export default defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      // Implement node event listeners here if needed
     },
   },
 
@@ -11,6 +12,8 @@ export default defineConfig({
     devServer: {
       framework: "react",
       bundler: "vite",
+      // Use the startDevServer function from cypress-vite
+      start: (options) => startDevServer({ options }),
     },
   },
 });

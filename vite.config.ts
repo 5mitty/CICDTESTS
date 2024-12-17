@@ -1,15 +1,19 @@
-import { defineConfig } from 'vitest/config';
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
+// Main Vite configuration
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+  ],
+  
   test: {
     globals: true,
     environment: 'jsdom',
     setupFiles: './src/_tests_/setup.ts',
     include: ['src/**/*.{test,spec}.{js,ts,jsx,tsx}'], // Specify where to look for test files
   },
+  
   server: {
     port: 3000,
     open: true,
