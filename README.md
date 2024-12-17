@@ -1,4 +1,4 @@
-## <FIVEDAYSAHEAD>
+## <CICDTESTS>
 
 video[demo]: https://youtu.be/eHkJHnSCfpU
 
